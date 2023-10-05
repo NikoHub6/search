@@ -1,5 +1,5 @@
-#!name=Search
-#!desc=Search
+#!name=SearchKing
+#!desc=SearchKing
 
 [URL Rewrite]
 
@@ -11,8 +11,8 @@
 ^https:\/\/www\.google\.com\/search\?q=p\+ shortcuts://x-callback-url/run-shortcut?name=URL%20Rewrite&input=text&text=zh, 302
 #x    xxx (小红书)
 ^https:\/\/www\.google\.com\/search\?q=x\+ shortcuts://x-callback-url/run-shortcut?name=URL%20Rewrite&input=text&text=zh, 302
-# bli xxx (哔哩哔哩)
-^https:\/\/www\.google\.com\/search\?q=bli\+ shortcuts://x-callback-url/run-shortcut?name=URL%20Rewrite&input=text&text=zh, 302
+# b xxx (哔哩哔哩)
+^https:\/\/www\.google\.com\/search\?q=b\+ shortcuts://x-callback-url/run-shortcut?name=URL%20Rewrite&input=text&text=zh, 302
 # jd  xxx (京东)
 ^https:\/\/www\.google\.com\/search\?q=jd\+ shortcuts://x-callback-url/run-shortcut?name=URL%20Rewrite&input=text&text=zh, 302
 # tb  xxx (淘宝)
@@ -25,24 +25,36 @@
 ^https:\/\/www\.google\.com\/search\?q=d\+ shortcuts://x-callback-url/run-shortcut?name=URL%20Rewrite&input=text&text=zh, 302
 # t    xxx (欧陆词典)
 ^https:\/\/www\.google\.com\/search\?q=t\+ shortcuts://x-callback-url/run-shortcut?name=URL%20Rewrite&input=text&text=zh, 302
+# dp    xxx (大众点评)
+^https:\/\/www\.google\.com\/search\?q=dp\+ shortcuts://x-callback-url/run-shortcut?name=URL%20Rewrite&input=text&text=zh, 302
 
-
-
-
+# tw    xxx (Twitter)
+^https:\/\/www\.google\.com\/search\?q=tw\+ shortcuts://x-callback-url/run-shortcut?name=URL%20Rewrite&input=text&text=zh, 302
 
 
 #网页版本
 # yd  xxx (有道词典)
 ^https:\/\/www\.google\.com\/search\?q=yd\+([^&]+).+ http://dict.youdao.com/search?q=$1 302
-# trc xxx (Google 译至中)
-^https:\/\/www\.google\.com\/search\?q=trc\+([^&]+).+ https://translate.google.com/#view=home&op=translate&sl=auto&tl=zh-CN&text=$1 302
+# tc xxx (Google 译至中)
+^https:\/\/www\.google\.com\/search\?q=tc\+([^&]+).+ https://translate.google.com/#view=home&op=translate&sl=auto&tl=zh-CN&text=$1 302
 
-# tre xxx (Google 译至英)
-^https:\/\/www\.google\.com\/search\?q=tre\+([^&]+).+ https://translate.google.com/#view=home&op=translate&sl=auto&tl=en&text=$1 302
-
-# wx    xxx (微信)
+# te xxx (Google 译至英)
+^https:\/\/www\.google\.com\/search\?q=te\+([^&]+).+ https://translate.google.com/#view=home&op=translate&sl=auto&tl=en&text=$1 302
 
 
+# ph  xxx (PornHub)
+^https:\/\/www\.google\.com\/search\?q=ph\+([^&]+).+ https://cn.pornhub.com/video/search?search=$1 302
+
+# bd  xxx (百度搜索)
+^https:\/\/www\.google\.com\/search\?q=bd\+([^&]+).+ https://www.baidu.com/s?wd=$1 302
+
+# by  xxx (必应)
+^https:\/\/www\.google\.com\/search\?q=by\+([^&]+).+ https://www.bing.com/search?q=$1 302
+
+
+
+# gh    xxx (GitHub)
+^https:\/\/www\.google\.com\/search\?q=gh\+([^&]+).+ https://github.com/search?q=$1 302
 
 
 
@@ -52,9 +64,12 @@
 
 
 
-# yd    xxx (有道）
 
+# cn  (切换至中国区)
+^https:\/\/www\.google\.com\/search\?q=cn&.+ https://itunes.apple.com/WebObjects/MZStore.woa/wa/resetAndRedirect?dsf=143465&mt=8&url=/WebObjects/MZStore.woa/wa/viewSoftware?mt=8&id=1108187390&cc=cn&urlDesc= 302
 
+# us  (切换至美国区)
+^https:\/\/www\.google\.com\/search\?q=us&.+ https://itunes.apple.com/WebObjects/MZStore.woa/wa/resetAndRedirect?dsf=143441&mt=8&url=/WebObjects/MZStore.woa/wa/viewSoftware?mt=8&id=1108187390&cc=us&urlDesc= 302
 [MITM]
 
 hostname = %APPEND% www.google.com
