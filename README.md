@@ -34,7 +34,7 @@
 
 #网页版本
 #t xxx（有道词典网页版）
-^https:\/\/www\.google\.com\/search\?q=t\+([^&]+).+m.youdao.com/m/result?word=$1&lang=en 302
+^https:\/\/www\.google\.com\/search\?q=t\+([^&]+).+ http://m.youdao.com/m/result?word=$1&lang=en 302
 # yd  xxx (有道词典)
 ^https:\/\/www\.google\.com\/search\?q=yd\+([^&]+).+ http://dict.youdao.com/search?q=$1 302
 # tc xxx (Google 译至中)
