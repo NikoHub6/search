@@ -24,7 +24,7 @@
 # d    xxx (抖音)
 ^https:\/\/www\.google\.com\/search\?q=d\+ shortcuts://x-callback-url/run-shortcut?name=URL%20Rewrite&input=text&text=d, 302
 # t    xxx (欧陆词典)
-^https:\/\/www\.google\.com\/search\?q=t\+ shortcuts://x-callback-url/run-shortcut?name=URL%20Rewrite&input=text&text=t, 302
+停用#^https:\/\/www\.google\.com\/search\?q=t\+ shortcuts://x-callback-url/run-shortcut?name=URL%20Rewrite&input=text&text=t, 302#
 # dp    xxx (大众点评)
 ^https:\/\/www\.google\.com\/search\?q=dp\+ shortcuts://x-callback-url/run-shortcut?name=URL%20Rewrite&input=text&text=dp, 302
 # tw    xxx (Twitter)
@@ -33,6 +33,8 @@
 
 
 #网页版本
+#t xxx（有道词典网页版）
+^https:\/\/www\.google\.com\/search\?q=t\+([^&]+).+ https://m.youdao.com/m/result?word=$1&lang=en 302
 # yd  xxx (有道词典)
 ^https:\/\/www\.google\.com\/search\?q=yd\+([^&]+).+ http://dict.youdao.com/search?q=$1 302
 # tc xxx (Google 译至中)
